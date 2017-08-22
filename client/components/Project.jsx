@@ -14,6 +14,7 @@ class Project extends React.Component {
     }
   }
 
+  //post user's progress
   POSTprogress() {
     axios.post('/API/progress', {
       projectId: this.props.project.id,
@@ -22,9 +23,10 @@ class Project extends React.Component {
     .catch(console.error);
   }
 
+  //gets user's progress
   GETprogress() {
     axios.get('/API/progress')
-      .then(res => 
+      .then(res =>
         this.props.loadProgress(res.data)
       )
       .catch(console.error);
@@ -39,6 +41,9 @@ class Project extends React.Component {
   }
 }
 
+/*
+  Allows Project component to have project and projectID state
+*/
 const mapStateToProps = (state, props) => {
   const projectId = Number(props.match.params.id);
   const project = state.projects.filter(project => project.id === projectId)[0];
@@ -48,6 +53,10 @@ const mapStateToProps = (state, props) => {
   };
 };
 
+/*
+  Map our dispatch to Project component as props
+  Dispatch can be found in store/reducers.js
+*/
 const mapDispatchToProps = (dispatch, props) => {
   return {
     dispatchProgress: (projectId, itemIndex) => dispatch({
@@ -62,4 +71,5 @@ const mapDispatchToProps = (dispatch, props) => {
   };
 };
 
+//connects the Store to Project component
 export default connect(mapStateToProps, mapDispatchToProps)(Project);
