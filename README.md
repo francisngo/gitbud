@@ -20,7 +20,21 @@
 
 ## Usage
 
-> Some usage instructions
+- fork and clone the repo
+- install dependencies from the root of the repo by running
+```sh
+npm install
+```
+- download and install neo4j from https://neo4j.com/download/community-edition
+- seed the database by running:
+```sh
+npm run seed
+```
+- run the following command to start the server
+```sh
+npm start
+```
+-open localhost:8080 in your browser to start using the application.
 
 ## Requirements
 
