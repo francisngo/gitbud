@@ -20,26 +20,33 @@
 
 ## Usage
 
-- fork and clone the repo
-- install dependencies from the root of the repo by running
+- Fork and clone the repo
+- Install dependencies from the root of the repo by running
 ```sh
 npm install
 ```
-- download and install neo4j from https://neo4j.com/download/community-edition
-- seed the database by running:
+- [Download](https://neo4j.com/download/community-edition) and install neo4j
+- Start the neo4j server (OS dependent)
+- Seed the database by running:
 ```sh
 npm run seed
 ```
-- run the following command to start the server
+- Transpile the JSX files with
+```sh
+npm run dev
+```
+> __NOTE__ This sets webpack to watch your /client files for changes
+- Run the following command to start the server
 ```sh
 npm start
 ```
-- open localhost:8080 in your browser to start using the application.
+> __NOTE__ This runs nodemon, which will watch server.js and your /server files for changes
+- Open localhost:8080 in your browser to start using the application.
 
 ## Requirements
 
 - Node 0.10.x
-- Neo4j 3.x
+- [neo4j 3.x](https://neo4j.com/download/)
 
 ## Development
 
@@ -50,6 +57,7 @@ From within the root directory:
 ```sh
 npm install
 ```
+[Download](https://neo4j.com/download/community-edition), install and run neo4j
 
 ### Roadmap
 
