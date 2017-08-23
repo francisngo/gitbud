@@ -34,7 +34,7 @@ npm run seed
 ```sh
 npm start
 ```
--open localhost:8080 in your browser to start using the application.
+- open localhost:8080 in your browser to start using the application.
 
 ## Requirements
 
