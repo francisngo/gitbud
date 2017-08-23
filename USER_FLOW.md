@@ -40,7 +40,9 @@
 - The next time the user clicks the Project through the the project list page, they will be taken to the Project Status page.
 
 ## Project Status
-
+- This page has multiple checkboxes to that allow users to track their project progress.
+- Clicking 'Submit Progress' after checking checkboxes will save the users progress.
+- The next time the user enters the Project Status component, the boxes will remain checked.
 
 ## My Projects
 
