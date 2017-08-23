@@ -74,8 +74,6 @@ module.exports = {
     },
 
     // Returns an array of user objects interested in the given project id
-    // NOTE: The project ID is sent in the headers. This is a hack to deal with our
-    // rubbish URL parsing. You may wish to fix it.
     // NOTE: The relative xp is a relationship between users
     // calculated and stored for new users in the profliing module.
     // The User model stores this relationship between returned users and the
@@ -85,7 +83,7 @@ module.exports = {
         const dbSession = dbDriver.session();
         console.log('GET users');
         const ghId = req.user.ghInfo.id;
-        const projectId = Number(req.headers.id);
+        const projectId = Number(req.query.projectId);
         dbSession.run(`
           MATCH (user:User {ghId: ${ghId}})<-[xp:EXPERIENCE_DIFFERENCE]->(pair:User)
           WITH user, pair, xp

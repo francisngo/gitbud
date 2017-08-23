@@ -49,7 +49,7 @@ fs.readFile(path.join(__dirname, '../../dist/index.html'), 'utf8', (err, data) =
 exports.handler = function handler(req, res) {
 
   // split URL to send to correct request handler
-  const urlParts = req.url.split('/');
+  const urlParts = req.path.split('/');
 
   // React routes
   if (routes.react.has(urlParts[1])) {
