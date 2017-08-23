@@ -17,13 +17,6 @@
  *  db module, but importantly you will notice that with neo4j, we can extract the various
  *  aliased fields of a response with the .get() method of a record. This is extremely useful
  *  and we recommend making heavy use of it in order to build and parse complex queries efficiently.
- *
- *  THINGS TO FIX:
- *  We really should have used a proper url parser (node has one in the box!) from the beginning.
- *  
- *  Our not doing so has led to a great example of pathway dependency. We never found the time to refactor.
- *  For a great example of the problems this causes, check the incredible kludge of sending GET request info in the
- *  headers rather than as URL params (/API/users).
  */
 
 // Node librares
@@ -35,7 +28,7 @@ const routes = require('../routes');
 // Cache index.html to serve quickly on React routes and invalid URLs
 fs.readFile(path.join(__dirname, '../../dist/index.html'), 'utf8', (err, data) => {
   if (err) {
-    throw new Error(err);
+    throw err;
   } else {
     exports.index = data;
   }
@@ -49,7 +42,7 @@ fs.readFile(path.join(__dirname, '../../dist/index.html'), 'utf8', (err, data) =
 exports.handler = function handler(req, res) {
 
   // split URL to send to correct request handler
-  const urlParts = req.url.split('/');
+  const urlParts = req.path.split('/');
 
   // React routes
   if (routes.react.has(urlParts[1])) {
