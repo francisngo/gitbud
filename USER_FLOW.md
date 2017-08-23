@@ -32,11 +32,15 @@
 - The list is sorted by an aglorithm on the server side that calculates the difference in coding activity by language between users.
 - Clicking on a recommended user will route the user to the User Details component
 
-## User List
-
 ## User Details
+- This page displays user information collected from the questionnaire by a user
+- There are options to message the user, and pairing with the user.
+- Pairing with a user will establish a pairing between the 2 users, represented by a PAIRED_WITH relationship in neo4j.
+- The 2 users will also officially start working on the project, established by a WORKING_ON relationship in neo4j.
+- The next time the user clicks the Project through the the project list page, they will be taken to the Project Status page.
 
 ## Project Status
+
 
 ## My Projects
 
