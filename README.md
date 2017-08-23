@@ -35,11 +35,12 @@ npm run seed
 ```sh
 npm run dev
 ```
-> _NOTE_ This sets webpack to watch your files for changes
+> __NOTE__ This sets webpack to watch your /client files for changes
 - Run the following command to start the server
 ```sh
 npm start
 ```
+> __NOTE__ This runs nodemon, which will watch server.js and your /server files for changes
 - Open localhost:8080 in your browser to start using the application.
 
 ## Requirements
