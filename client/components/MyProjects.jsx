@@ -57,4 +57,4 @@ const mapStateToProps = (state) => {
 };
 
 //connects the Store to MyProjects component
-export default connect(mapStateToProps, mapDispatchToProps)(MyProjects);
+export default connect(mapStateToProps)(MyProjects);

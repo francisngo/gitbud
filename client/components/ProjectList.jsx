@@ -58,4 +58,4 @@ const mapStateToProps = (state) => {
 
 
 //connects the Store to ProjectList
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);
+export default connect(mapStateToProps)(ProjectList);

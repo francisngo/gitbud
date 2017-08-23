@@ -102,7 +102,15 @@ const projectProgress = (state, action) => {
   return state;
 };
 
-// hands off state/dispatch to React components with mapStateToProps and mapDispatchToProps
+/*
+  hands off state/dispatch to React components with mapStateToProps and mapDispatchToProps
+  combineReducers function creates a single object that contains all the reducers
+  keys are the names of properties on the state and the value is the reducer function itself.
+  reducers are scoped to that property (e.g. the users reducer only receives the users property
+  of the state and only need return the users property). This massively simplifies the reducers'
+  code--they don't have to worry about every other part of the state.
+  what we are doing here is using ES6 destructuring, so key and value are named the same.
+*/
 export default combineReducers({
   message: changeString,
   users,
