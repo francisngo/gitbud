@@ -26,7 +26,11 @@
 - The container checks the user's state to see whether the user is paired on a project or not, and renders the appropriate component.
 
 ## Project Details
-
+- This page displays information about a project such description, link to GitHub repo, and a list of recommended users to pair with.
+- An Interest button allows user to express interest in the project.
+- The Project Details component uses a UserList Component to display a list of recommended users who have also expressed interest in the project.
+- The list is sorted by an aglorithm on the server side that calculates the difference in coding activity by language between users.
+- Clicking on a recommended user will route the user to the User Details component
 
 ## User List
 
