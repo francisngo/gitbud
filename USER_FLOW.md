@@ -45,5 +45,10 @@
 - The next time the user enters the Project Status component, the boxes will remain checked.
 
 ## My Projects
+- This component is accessible through the app bar.
+- It displays the list of projects the user is currently WORKING_ON
+
 
 ## My Account
+- This component is accessible through the app bar
+- It displays the the user's information that was entered in the questionnaire
