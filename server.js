@@ -2,7 +2,7 @@
  * ENTRY POINT TO ALL THE SERVER SIDE CODE
  * 
  * Most of the server code is clearly modularised, so this
- * is mostly uncontraversial requires and uses.
+ * is mostly uncontroversial requires and uses.
  * 
  * The other server modules are:
  *    request-handler
