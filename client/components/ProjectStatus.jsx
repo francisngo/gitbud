@@ -16,6 +16,19 @@ const style = {
   margin: 12,
 };
 
+// renders a progress item component inside ProjectStatus
+const ProgressItem = (props) => {
+  const check = () => props.dispatchProgress(props.projectId, props.index);
+  return (
+    <div>
+      <Checkbox checked={props.complete} label={props.text} onCheck={check} />
+      <CardText>
+        { props.hint }
+      </CardText>
+    </div>
+  )
+};
+
 class ProjectStatus extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +41,7 @@ class ProjectStatus extends React.Component {
     this.handleClose = this.handleClose.bind(this);
   }
 
+  //handles opening the dialog alert and submits the project's progress
   handleSubmit() {
     this.setState({
       open: true
@@ -35,6 +49,7 @@ class ProjectStatus extends React.Component {
     this.props.submitProgress()
   }
 
+  //handles the closing of dialog alert
   handleClose() {
     this.setState({
       open: false
@@ -77,7 +92,6 @@ class ProjectStatus extends React.Component {
             }
           </div>
           <RaisedButton label="Submit Progress" onClick={this.handleSubmit} primary={true} style={style} />
-          {/* <RaisedButton label="Alert" onClick={this.handleSubmit} /> */}
           <Dialog
             actions={
               <FlatButton
@@ -99,15 +113,3 @@ class ProjectStatus extends React.Component {
 }
 
 export default ProjectStatus;
-
-const ProgressItem = (props) => {
-  const check = () => props.dispatchProgress(props.projectId, props.index);
-  return (
-    <div>
-      <Checkbox checked={props.complete} label={props.text} onCheck={check} />
-      <CardText>
-        { props.hint }
-      </CardText>
-    </div>
-  )
-};

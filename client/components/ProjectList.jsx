@@ -45,7 +45,6 @@ const ProjectList = (props) => {
             )}
           </TableBody>
         </Table>
-        {/* <RaisedButton label="I'm interested" primary={ true } fullWidth={ true } /> */}
       </Card>
     </Paper>
   );
@@ -57,8 +56,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return { };
-};
 
+//connects the Store to ProjectList
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);

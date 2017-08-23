@@ -45,21 +45,16 @@ const MyProjects = (props) => {
             )}
           </TableBody>
         </Table>
-      {/* <RaisedButton label="I'm interested" primary={ true } fullWidth={ true } /> */}
     </Card>
     </Paper>
   );
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.projects);
   return {
     projects: state.projects.filter(project => project.paired.length > 0),
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return { };
-};
-
+//connects the Store to MyProjects component
 export default connect(mapStateToProps, mapDispatchToProps)(MyProjects);

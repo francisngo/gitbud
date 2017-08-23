@@ -150,8 +150,7 @@ class App extends React.Component {
 }
 
 /*
-  Map our state to this component as props
-  State can be found in store/reducers.js
+  Allows App component to have message and project state
 */
 const mapStateToProps = (state) => {
   return {
@@ -161,8 +160,8 @@ const mapStateToProps = (state) => {
 };
 
 /*
-  Map our dispatch to this component as props
-  Dispatch can be found in
+  Map our dispatch to App component as props
+  Dispatch can be found in store/reducers.js
 */
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -181,4 +180,5 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
+//connects the Store to App component
 export default connect(mapStateToProps, mapDispatchToProps)(App);
