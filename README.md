@@ -12,11 +12,11 @@
 
 ## Table of Contents
 
-1. [Requirements](#requirements)
-1. [Getting Started](#getting-started)
-1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-1. [Contributing](#contributing)
+* [Requirements](#requirements)
+* [Getting Started](#getting-started)
+* [Development](#development)
+  * [Installing Dependencies](#installing-dependencies)
+* [Contributing](#contributing)
 
 ## Requirements
 
