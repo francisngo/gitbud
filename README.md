@@ -2,6 +2,8 @@
 
 > GitBud is an application that allows users to connect with others who are either at the same level or higher to work on open source projects. Users can view current projects, interested users, and pair up to work on a project together.
 
+* [Deployed Application Link](https://gitbud.herokuapp.com)
+
 ## Team
 
   - __Product Owner__: Shaikat Haque
@@ -10,15 +12,22 @@
 
 ## Table of Contents
 
-1. [Usage](#Usage)
 1. [Requirements](#requirements)
+1. [Getting Started](#getting-started)
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
     1. [Tasks](#tasks)
 1. [Team](#team)
 1. [Contributing](#contributing)
 
-## Usage
+## Requirements
+
+- Node 0.10.x
+- Neo4j 3.x
+
+## Getting Started
+
+Following these instructions will get you a copy of the project up and running for development purposes.
 
 > __Environment Variables__ GitBud has hardcoded a username of 'neo4j' and a password of 'neo' for neo4j. You can change these in the code or override them by setting the appropriate environment variables. You will also need a GitHub Client ID and Client Secret to use the GitHub API. These, too, are set as environment variables. We have used the .env package, which allows environment variables to be set easily with the .env file in the root directory of the project. An example of the necessary variables for GitBud been provided here in this repo.
 
@@ -45,11 +54,14 @@ npm start
 > __NOTE__ This runs nodemon, which will watch server.js and your /server files for changes
 - Open localhost:8080 in your browser to start using the application.
 
+<<<<<<< HEAD
 ## Requirements
 
 - Node 0.10.x
 - [neo4j 3.x](https://neo4j.com/download/)
 
+=======
+>>>>>>> Update README.md
 ## Development
 
 ### Installing Dependencies

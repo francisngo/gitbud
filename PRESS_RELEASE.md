@@ -27,7 +27,3 @@
 ### Customer Quote
 
 > "Gitbud helped me get started on my first open source project with ease."
-
-### Closing and Call to Action
-
-> FILL_ME_IN
